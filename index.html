@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Beans Coffee Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ----------------------------------------------------Welcome page------------------------------- ---------------------->
+
+    <div class="welcome" style="width: 100%;height:850px;">
+        <audio id="audioplayer" controls autoplay loop style="margin-top: 350px;">
+            <source src="./assests/audio/Beloved(chosic.com).mp3" type="audio/mpeg">
+            <source src="./assests/audio/melody-of-nature-main(chosic.com).mp3" type="audio/ogg">
+            <source src="./assests/audio/Sweet(chosic.com).mp3" type="audio/ogg">
+
+            Your browser does not support the audio element.
+          </audio>
+      </div>
+      <!-- ---------------------------------------------------content(whole body)---------------------------------------------->
+
+      <div class="content">
+        <!-- --------------------------------------------------header------------------------------------------------------- -->
+
+        <header>
+            <div class="logo">
+                <h1>Cozy Beans</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <div id="cart-symbol">
+                    Cart <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+            <span class="sign-in-icon" onclick="toggleSignIn()"><i class="fas fa-user"></i></span>
+
+        </header>
+        <!-- --------------------------------------------------cofee quote-------------------------------------------------- -->
+
+    <section id="coffee-quote">
+        <h2>Your Daily Dose of Warmth</h2>
+        <p>Come for the coffee, stay for the vibes. A perfect cup of coffee can make everything feel just right. Relax, work, or simply enjoy the cozy atmosphere!</p>
+    </section>
+<!-- ----------------------------------------------------------about-------------------------------------------------------- -->
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="flex: 1; padding-right: 10px;">
+                <!-- Image Section -->
+                <img src="./assests/images/about.webp" alt="Coffee Shop Image" style="width: 100%; height: 450px; border-radius: 30px; box-shadow: 0 0 40px black">
+            </div>
+            <div style="flex: 1; padding-left: 50px;">
+                <p>Welcome to Cozy Beans, your friendly neighborhood coffee shop. We pride ourselves on brewing the finest coffee and creating a cozy space for you to relax and unwind. We source our beans from dedicated farmers and ensure every cup is filled with love and quality.</p>
+                <br><br><br>
+                <a href="#menu" class="btn" >View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------menu------------------------------------------------------- -->
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-container" >
+            <div class="menu-item" data-price="60">
+                <img src="./assests/images/expresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>A concentrated coffee shot that’s small but packed with flavor.<br>Price :₹60 </p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="80">
+                <img src="./assests/images/cappucino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Espresso with steamed milk and a layer of milk foam.<br> Price: ₹80</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="90">
+                <img src="./assests/images/Dirty Chai Latte Recipe.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Espresso served with hot steamed milk, topped with light foam. <br> Price: ₹90</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="100">
+                <img src="./assests/images/americano.jpg" alt="Americano">
+                <h3>Americano</h3>
+                <p>Smooth espresso mixed with hot water for a rich, mellow flavor.<br>Price: ₹100</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+
+            </div>
+            <div class="menu-item" data-price="120">
+                <img src="./assests/images/Salted Caramel Macchiato.jpg" alt="Macchiato">
+                <h3>Macchiato</h3>
+                <p>A bold espresso topped with milk foam.<br>Price: ₹120</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+
+            </div>
+            <div class="menu-item" data-price="100" >
+                <img src="./assests/images/mocha.jpg" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Espresso mixed with chocolate and milk.<br>Price: ₹100</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+
+            </div>
+            <div class="menu-item" data-price="90">
+                <img src="./assests/images/bubble coffee.jpg" alt="Bubble coffee">
+                <h3>Bubble coffee</h3>
+                <p>Coffee milk transforms into an art form as rich coffee blends with Cozy Beans. <br> Price: ₹90</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="90">
+                <img src="./assests/images/bubble tea.jpg" alt="Bubble Tea">
+                <h3>Bubble Tea</h3>
+                <p>Traditional black and green teas to soothing herbal and trendy boba tea, plus a unique Earl Grey Lavender blend. <br> Price: ₹90</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="90">
+                <img src="./assests/images/iced tea.jpg" alt="Iced Tea">
+                <h3>Iced Tea</h3>
+                <p>We've got you covered with 7 healthy iced tea recipes that use real fruit and are low sugar. Perfect for a crowd or sipping ice tea all week long! <br> Price: ₹90</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+         
+            <div class="menu-item" data-price="90">
+                <img src="./assests/images/Chocolate Glazed Donuts by Master Baker - My Urban Treats.jpg" alt="Hot Chocolate">
+                <h3>Hot Chocolate</h3>
+                <p>A rich mix of cocoa, sugar, and whipped cream for sweetness.<br> Price:  ₹90</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="120">
+                <h3>Affogato</h3>
+                <img src="./assests/images/Affogato.jpg" alt="Affogato" class="menu-img">
+                <p>Hot espresso poured over an icy frappuccino made beautiful pockets of rich coffee as it mingled with icy coffee and cream. <br> Price: ₹120</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="100">
+                <h3>Frappuccino</h3>
+                <img src="./assests/images/frappe-con-sirope-chocolate-1280x1920.jpeg" alt="Frappuccino" class="menu-img">
+                <p>consist of coffee or crème base, blended with ice and ingredients such as flavored syrups and usually topped with whipped cream and or spices.<br> Price: ₹100</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="100">
+                <h3>Cold Coffee</h3>
+                <img src="./assests/images/cold coffee.jpg" alt="Cold Coffee" class="menu-img">
+                <p>consist of coffee or crème base, blended with ice and ingredients such as flavored syrups and usually topped with whipped cream and or spices.<br> Price: ₹100</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="40">
+                <h3>cherry Danish</h3>
+                <img src="./assests/images/Deliciously Sweet Cherry Cheese Danish Delight.jpg" alt="cherry Danish" class="menu-img">
+                <p>A Danish is a popular pastry around the world and is commonly filled with jams, fruits, and nuts.<br> Price: ₹40</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="30">
+                <h3>Croissants</h3>
+                <img src="./assests/images/Easy Chocolate Croissants _ thecozyapron_com.jpg" alt="Croissants" class="menu-img">
+                <p>Made with a dough that's been butter-based and rolled up, after which it's molded into a crescent form. <br> Price: ₹30</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+            <div class="menu-item" data-price="60">
+                <h3>Pan au Chocolat</h3>
+                <img src="./assests/images/Pain au chocolat.jpg" alt="Pan au Chocolat" class="menu-img">
+                <p>Pain au chocolat consisting of flaky, buttery croissant dough, wrapped around two batons of dark chocolate and baked.<br> Price: ₹60</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-price="40">
+                <h3>Pastries</h3>
+                <img src="./assests/images/pastries.jpg" alt="Pastries">
+                <p>made using a stiff dough enriched with fat.<br> Price: ₹40</p>
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-price="60">
+                <h3>Donut</h3>
+                <img src="./assests/images/Chocolate Glazed Donuts by Master Baker - My Urban Treats.jpg" alt="" class="menu-img">
+                <p>a small ring of sweet leavened dough that has been fried or sometimes baked. <br>Price:  ₹60</p>
+                
+                <div class="order-controls">
+                    <button class="order-decrease">-</button>
+                    <button class="order-now">Order Now</button>
+                    <button class="order-increase">+</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- -----------------------------------------------------cart------------------------------------------------------------ -->
+
+    <div id="cart" style="display: none; border: 1px solid #ccc; padding: 10px; width: 300px; margin: 20px auto;">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="cart-total">0</span></p>
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+        <button id="process-order" onclick="processOrder()">Process Order</button>
+    </div>
+
+    <!-- ----------------------------------------------------signin----------------------------------------------------------- -->
+    
+    <div id="overlay" onclick="closeOverlay()">
+        <div class="container" id="signInContainer" onclick="event.stopPropagation()">
+            <h1>Sign In</h1>
+            <form>
+                <input type="email" id="email" placeholder="Email" required>
+                <div>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="toggle-btn" id="togglePassword"></span>
+                </div>
+                <button type="button" onclick="signIn()">Sign In</button>
+                <button id="sign-out" onclick="signOut()">Sign Out</button>
+            </form>
+            <div class="link">
+                <a href="#" onclick="showResetPassword()">Forgot Password?</a>
+            </div>
+            <div class="link">
+                <a href="#" onclick="showSignUp()">Don't have an account? Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <br><br><br><br><br> -->
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- ----------------------------------------------------Testimonies------------------------------------------------- -->
+
+    <section id="testimonials">
+        <h2>Customer Testimonials</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <img src="./assests/testimonies/3v.jpg" alt="Customer 1" class="testimonial-img">
+                    <pre>"Cozy Beans is my go-to spot for 
+great coffee and a peaceful vibe!"</pre>
+                    <h4>- Triveni V.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/umar.jpg" alt="Customer 2" class="testimonial-img">
+                    <pre>"The cappuccino here is unmatched.
+It's always perfectly made!"</pre>
+                    <h4>- Umar Syed.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/harshini.jpg" alt="Customer 3" class="testimonial-img">
+                    <pre>"I love their pastries! The cherry Danish is to die for!"</pre>
+                    <h4>- Harshini Raj</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/eesha.jpg" alt="Customer 4" class="testimonial-img">
+                    <pre>“I love getting the fresh coffee 
+smell every time I open my bag of Club Coffee pods."</pre>
+                    <h4>- Naveena K.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/sai anna.jpg" alt="Customer 5" class="testimonial-img">
+                    <pre>“Not too mild and not too strong… 
+I’ve found my perfect medium roast blend.
+A delicious kick in the morning!”</pre>
+                    <h4>- KLN Sai</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/teja.jpg" alt="Customer 6" class="testimonial-img">
+                    <pre>"Cozy Beans is not just a coffee shop; it’s a community hub!"</pre>
+                    <h4>- Teja Trivikram V.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="./assests/testimonies/rajabavagaru.jpg" alt="Customer 7" class="testimonial-img">
+                    <pre>"The vibe here is so relaxing, and their Affogato is heavenly!"</pre>
+                    <h4>- Rajashekhar K.</h4>
+                </div>
+            </div>
+        </marquee>
+    </section>
+    <!-- -----------------------------------------------------location--------------------------------------------------- -->
+    
+    <section id="location">
+        <h2>Find Us</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="flex: 1; padding-right: 10px;">
+                
+                <img src="https://wallpapercave.com/wp/wp9277538.jpg" alt="Coffee Shop Image" style="width: 100%; height: 450px; border-radius: 30px; box-shadow: 0 0 50px black;margin-top: 10%;margin-left: 5% ;">
+            </div>
+            <div style="flex: 1; padding-left: 50px;">
+        <p>Vijayanagar 2nd stage opp.Zudio  Mysuru</p>
+        <p>Open: Mon-Sun, 7:00 AM - 9:00 PM</p>
+        </div>`
+    </section>
+                      <!-- ---------------------------------logos(fb,what'spp,twitter)--------------------------- -->
+    <section id="social">
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------contact-------------------------------------------------- -->
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="msg">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> 
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required style="width: 720px; height: 60px;border-radius: 10px;"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- ------------------------------------------------------footer------------------------------------------------- -->
+
+    <footer>
+        <p>&copy; 2024 Cozy Beans Coffee Shop. All rights reserved.</p>
+    </footer>
+
+</div>
+
+<!-- ----------------------------------------------------------------------------script-------------------------------------------------------------------------------- -->
+
+<script>
+    // -----------------------------------------------------welcome page------------------------------------------------------
+
+// Wait for 3 to 5 seconds before showing the content
+setTimeout(() => {
+  document.querySelector('.welcome').classList.add('hidden'); // Slide up
+  setTimeout(() => {
+    document.querySelector('.content').classList.add('visible'); // Show content
+  }, 1000); // Allow time for the slide-up animation to finish
+}, 4000); // Change this value (3000 to 5000) for different durations
+
+// -----------------------------------------------------------------main--------------------------------------------------------
+
+const cart = {
+    items: [],
+    total: 0,
+    totalCount: 0, // To track the total number of items
+};
+
+const cartElement = document.getElementById("cart");
+const cartItemsElement = document.getElementById("cart-items");
+const cartTotalElement = document.getElementById("cart-total");
+const clearCartButton = document.getElementById("clear-cart");
+const cartSymbol = document.getElementById("cart-symbol");
+
+// ----------------------------------------------------------cart emojis-------------------------------------------------
+
+const cartEmoji = document.getElementById("cart-emoji");
+
+// Update emoji based on cart total price
+function updateEmoji() {
+    if (cart.total === 0) {
+        cartEmoji.textContent = "😢"; // Sad emoji for empty cart
+    } else if (cart.total > 0 && cart.total <= 300) {
+        cartEmoji.textContent = "😊"; // Light smile for a low cart total
+    } else if (cart.total > 300 && cart.total <= 650) {
+        cartEmoji.textContent = "😁"; // Medium smile for a moderate cart total
+    } else if (cart.total > 650) {
+        cartEmoji.textContent = "😄"; // Wide smile for a high cart total
+    }
+    
+}
+
+// Add an item to the cart
+function addToCart(name, price) {
+    const existingItem = cart.items.find((item) => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.items.push({ name, price, quantity: 1 });
+    }
+
+    updateCart(); // Update cart details and totals
+}
+
+// Remove an item from the cart
+function removeFromCart(name) {
+    const itemIndex = cart.items.findIndex((item) => item.name === name);
+
+    if (itemIndex !== -1) {
+        cart.items[itemIndex].quantity -= 1;
+
+        if (cart.items[itemIndex].quantity <= 0) {
+            cart.items.splice(itemIndex, 1);
+        }
+    }
+
+    updateCart(); // Update cart details and totals
+}
+
+// Clear all items from the cart
+clearCartButton.addEventListener("click", () => {
+    cart.items = [];
+    updateCart(); // Reset cart totals and items
+    cartEmoji.textContent = "😡"; // Angry emoji for clearing the cart
+    setTimeout(updateEmoji, 2000); // Reset emoji after 2 seconds
+});
+
+// Update the cart display and totals
+function updateCart() {
+    // Reset and rebuild the cart item list
+    cartItemsElement.innerHTML = "";
+    cart.items.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item.name} - ₹${item.price} x ${item.quantity} 
+            <button class="cart-btn" data-index="${index}" data-action="increase">+</button>
+            <button class="cart-btn" data-index="${index}" data-action="decrease">-</button>
+        `;
+        cartItemsElement.appendChild(li);
+    });
+
+    // Calculate the total price
+    cart.total = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    // Update total price display
+    cartTotalElement.textContent = cart.total;
+    updateEmoji(); // Ensure emoji is updated
+}
+
+// Show the cart
+function showCart() {
+    cartElement.style.display = "block";
+}
+
+// Event delegation for + and - buttons
+cartItemsElement.addEventListener("click", (event) => {
+    if (event.target.classList.contains("cart-btn")) {
+        const action = event.target.dataset.action;
+        const index = parseInt(event.target.dataset.index, 10);
+
+        if (action === "increase") {
+            cart.items[index].quantity += 1;
+        } else if (action === "decrease") {
+            cart.items[index].quantity -= 1;
+            if (cart.items[index].quantity <= 0) {
+                cart.items.splice(index, 1);
+            }
+        }
+
+        updateCart(); // Update cart details and totals
+    }
+});
+
+// ---------------------------------------------sign in-----------------------------------------------------
+
+const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+        const overlay = document.getElementById('overlay');
+
+        // Toggle password visibility
+        togglePassword.addEventListener('click', () => {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            togglePassword.textContent = type === 'password' ? 'Show' : 'Hide';
+        });
+
+        // Toggle sign-in overlay visibility
+        function toggleSignIn() {
+            overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Close overlay when clicking outside the container
+        function closeOverlay() {
+            overlay.style.display = 'none';
+        }
+
+        // Mock function for sign-in action
+        function signIn() {
+            alert('Sign In functionality will be implemented.');
+        }
+
+        // Mock function for sign-up action
+        function signUp() {
+            alert('Sign Up functionality will be implemented.');
+        }
+
+        // Mock function for reset password
+        function resetPassword() {
+            alert('An OTP has been sent to your email or phone.');
+        }
+        let isLoggedIn = false; // Track the login status
+
+
+// Mock function to process the order
+function processOrder() {
+    if (!isLoggedIn) {
+        // If not logged in, show the login overlay
+        toggleSignIn();
+    } else {
+        // If logged in, redirect to the enter location page
+        window.location.href = 'enter_location.html';
+    }
+}
+
+
+// Function to toggle the sign-in overlay
+function toggleSignIn() {
+    overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Sign In functionality (mock)
+function signIn() {
+    isLoggedIn = true; // Mark user as logged in
+    alert("Signed in successfully!");
+    closeOverlay();
+}
+
+// Sign Out functionality
+function signOut() {
+    isLoggedIn = false; // Mark user as logged out
+    alert("You have been signed out.");
+
+    // Optionally, close the cart and/or login overlay when signing out
+    document.getElementById('cart').style.display = 'none'; // Hide cart (if needed)
+    closeOverlay(); // Close the login overlay (if open)
+}
+
+// Close overlay when clicking outside the container
+function closeOverlay() {
+    overlay.style.display = 'none';
+}
+
+// Function to clear the cart (mock)
+function clearCart() {
+    alert("Cart cleared!");
+    // Add cart clearing logic here
+}
+
+
+// --------------------------------------------------------cart----------------------------------------
+// Update the cart display
+function updateCart() {
+    cartItemsElement.innerHTML = "";
+    cart.items.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item.name} - ₹${item.price} x ${item.quantity} 
+            <button class="cart-btn" data-index="${index}" data-action="increase">+</button>
+            <button class="cart-btn" data-index="${index}" data-action="decrease">-</button>
+        `;
+        cartItemsElement.appendChild(li);
+    });
+
+    cart.total = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    cart.totalCount = cart.items.reduce((sum, item) => sum + item.quantity, 0); // Update total count
+
+    cartTotalElement.textContent = cart.total;
+    document.getElementById("cart-count").textContent = cart.totalCount; // Update total item count in header
+}
+
+// Add an item to the cart
+function addToCart(name, price) {
+    const existingItem = cart.items.find((item) => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.items.push({ name, price, quantity: 1 });
+    }
+
+    showCart(); // Ensure the cart is visible
+    updateCart();
+}
+
+// Remove an item from the cart
+function removeFromCart(name) {
+    const itemIndex = cart.items.findIndex((item) => item.name === name);
+
+    if (itemIndex !== -1) {
+        cart.items[itemIndex].quantity -= 1;
+
+        if (cart.items[itemIndex].quantity <= 0) {
+            cart.items.splice(itemIndex, 1);
+        }
+    }
+
+    showCart(); // Ensure the cart is visible
+    updateCart();
+}
+
+// Clear all items from the cart
+clearCartButton.addEventListener("click", () => {
+    cart.items = [];
+    updateCart();
+});
+
+// Add event listeners to menu items
+document.querySelectorAll(".menu-item").forEach((item) => {
+    const name = item.querySelector("h3").textContent;
+    const price = parseInt(item.getAttribute("data-price"), 10);
+
+    item.querySelector(".order-increase").addEventListener("click", (event) => {
+        addToCart(name, price);
+        event.stopPropagation(); // Prevent triggering the hide event
+    });
+
+    item.querySelector(".order-decrease").addEventListener("click", (event) => {
+        removeFromCart(name);
+        event.stopPropagation(); // Prevent triggering the hide event
+    });
+});
+
+// Show the cart
+function showCart() {
+    cartElement.style.display = "block";
+}
+
+// Hide the cart
+function hideCart() {
+    cartElement.style.display = "none";
+}
+
+// Handle cart visibility when clicking the cart symbol
+cartSymbol.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent bubbling
+    if (cartElement.style.display === "block") {
+        hideCart();
+    } else {
+        showCart();
+    }
+});
+
+// Hide cart when clicking anywhere else on the page
+document.addEventListener("click", () => {
+    hideCart();
+});
+
+// Handle cart interactions to prevent it from hiding
+cartElement.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent click events from bubbling
+});
+
+</script>
+
+    
+    
+    
+    <h1>Enter Your Location</h1>
+    <form>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

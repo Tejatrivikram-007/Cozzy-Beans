@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        #invoice-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        p, ul {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        #total-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+            }
+            #invoice-details {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            p, ul {
+                font-size: 0.95rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            #invoice-details {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            p, ul {
+                font-size: 0.9rem;
+            }
+            #total-price {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <div id="invoice-details">
+        <h2>User Details</h2>
+        <p id="user-name"></p>
+        <h2>Payment Method</h2>
+        <p id="payment-method"></p>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const userName = urlParams.get('name');
+            console.log("User Name:", userName); // Debugging statement
+            const paymentMethod = urlParams.get('paymentMethod');
+            console.log("Payment Method:", paymentMethod); // Debugging statement
+
+            document.getElementById('user-name').innerText = `Name: ${userName}`;
+            document.getElementById('payment-method').innerText = `Payment Method: ${paymentMethod}`;
+        </script>
+
+        <h2>Menu Items</h2>
+        <ul id="menu-items"></ul>
+        <h2>Total Price</h2>
+        <p id="total-price"></p>
+    </div>
+    <button><a href="index.html">Go Back To Main Page</a></button>
+
+    <script>
+        const menuItems = [
+            { name: "Item 1", quantity: 2, price: 10 },
+            { name: "Item 2", quantity: 1, price: 15 }
+        ];
+        const totalPrice = menuItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = `${item.name} - Quantity: ${item.quantity} - Price: $${item.price}`;
+            document.getElementById('menu-items').appendChild(li);
+        });
+        document.getElementById('total-price').innerText = `$${totalPrice}`;
+    </script>
+</body>
+</html>
